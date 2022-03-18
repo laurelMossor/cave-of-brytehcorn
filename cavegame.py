@@ -484,7 +484,9 @@ def main():
 # battle_sequence(bad1_hp, bad1_damage_calc, bad1_ac, player_hp) 
         
         player_hp = battle_sequence(bad1_hp, bad1_damage_calc, bad1_ac, player_hp, player_class, player_ac)
-        
+        if player_hp <= 0:
+            break
+
         
         print()
         print("Drawn by the sound of the conflict, another beast jumps out from behind the next corner!")
@@ -492,7 +494,8 @@ def main():
         time.sleep(2)
 
         player_hp = battle_sequence(bad2_hp, bad2_damage_calc, bad2_ac, player_hp, player_class, player_ac)
-        
+        if player_hp <= 0:
+            break
         
         print()
         print(">< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< ><")
@@ -537,7 +540,9 @@ def main():
         time.sleep(1)
 
         player_hp = battle_sequence(bad4_hp, bad4_damage_calc, bad4_ac, player_hp, player_class, player_ac)
-        
+        if player_hp <= 0:
+            break
+            
         print()
         print(">< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< ><")
         print()
@@ -552,8 +557,8 @@ def main():
         time.sleep(1)
         
         
-        ## FINAL MESSAGES
-        print("Thank you for playing The Cave of Bry'teh Corhn. People will sing songs of your glory for many years to come.")
         break
+
+    print("Thank you for playing The Cave of Bry'teh Corhn. People will sing songs of your glory for many years to come.")
 
 main()
